@@ -5,8 +5,6 @@ function Index ({breads, title})  {
   return (
     <Default title={title} >
       <h2>Index Page</h2>
-      {/* <p>I have {breads[0].name} bread!</p> */}
-      {/* This is a JSX comment. */}
       <ul>
       {
         breads.map((bread, index)=> {
@@ -19,7 +17,11 @@ function Index ({breads, title})  {
           )
         })
       }
-
+          <li>
+            <div className="newButton">
+              <a href="/breads/new"><button>Add a new bread</button></a>
+            </div>
+          </li>
       </ul>
 </Default>
 
