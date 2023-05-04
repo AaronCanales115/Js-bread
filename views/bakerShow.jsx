@@ -23,9 +23,17 @@ function Show ({baker}) {
                 <input type="submit" value="DELETE"/>
             </form>
 
-      </Default>
+      </Default> 
     )
+    Model.find()
+    .populate({
+    path: 'fieldToPopulate',
+    options: { limit: 2 }
+  })
 }
+
+
+
 
 module.exports = Show
 
